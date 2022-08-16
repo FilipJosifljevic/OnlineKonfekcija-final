@@ -1,0 +1,33 @@
+.contactscreen {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 6rem 0;
+}
+.contactscreen__title,
+.contactscreen__info {
+    color: #2f3640;
+    opacity: 70%;
+}
+.contactscreen__container {
+    margin: 2rem 0;
+    border: 1px #2f3640 solid;
+    border-radius: 15px;
+    height: 200px;
+    display: flex;
+}
+.contactscreen__left {
+    width: 40%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin: 0.4rem;
+    background: #171717;
+    border: 1px solid #171717;
+    border-radius: 15px;
+    color: #fff;
+}
+.contactscreen__left > p ,
+.contactscreen__left > h3 {
+    margin-top: 0.9rem;
+}
