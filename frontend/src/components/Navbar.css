@@ -73,6 +73,14 @@
 .hamburger__menu:hover > div {
     background: #535c68;
 }
+.userIcon {
+    color: #f4f4f4;
+    cursor: pointer;
+}
+.menuItem {
+    text-decoration: none;
+    color :#171717;
+}
 @media (max-width: 960px) {
     .navbar__links {
         display: none;

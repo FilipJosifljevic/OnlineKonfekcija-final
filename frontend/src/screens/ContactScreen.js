@@ -1,25 +1,81 @@
-import './ContactScreen.css';
+import "./ContactScreen.css";
+import { useState } from "react";
 
 const ContactScreen = () => {
-    return (
-        <div className="contactscreen">
-            <h1 className="contactscreen__title">Contact Us</h1>
-            <p className="contactscreen__info">Have any questions?Write us a message!</p>
-            <div className="contactscreen__container">
-                <div className="contactscreen__left">
-                    <h3 className="left__title">Contact Information</h3>
-                    <p className="left__undertext">Fill in your data and expect our response as soon as possible!</p>
-                    <p className="left__phone">0123 456 789</p>
-                    <p className="left__email">onlinekonfekcija@gmail.com</p>
-                    <p className="left__location">123 Street</p>
+  const [val, setVal] = useState();
+  return (
+    <div className="contactscreen">
+      <div className="background">
+        <div className="container">
+          <div className="screen">
+            <div className="screen-header">
+              <div className="screen-header-left">
+                <div className="screen-header-button close"></div>
+                <div className="screen-header-button maximize"></div>
+                <div className="screen-header-button minimize"></div>
+              </div>
+              <div className="screen-header-right">
+                <div className="screen-header-ellipsis"></div>
+                <div className="screen-header-ellipsis"></div>
+                <div className="screen-header-ellipsis"></div>
+              </div>
+            </div>
+            <div className="screen-body">
+              <div className="screen-body-item left">
+                <div className="app-title">
+                  <span>CONTACT</span>
+                  <span>US</span>
                 </div>
-                <div className="contactscreen__right">
-
+                <div className="app-contact">
+                  CONTACT INFO : +391 123 456 789
                 </div>
-            </div>  
+              </div>
+              <div className="screen-body-item">
+                <div className="app-form">
+                  <div className="app-form-group">
+                    <input
+                      className="app-form-control"
+                      placeholder="NAME"
+                      value={val}
+                    />
+                  </div>
+                  <div className="app-form-group">
+                    <input
+                      className="app-form-control"
+                      placeholder="EMAIL"
+                      value={val}
+                    />
+                  </div>
+                  <div className="app-form-group">
+                    <input
+                      className="app-form-control"
+                      placeholder="CONTACT NUMBER"
+                      value={val}
+                    />
+                  </div>
+                  <div className="app-form-group message">
+                    <input
+                      className="app-form-control"
+                      placeholder="MESSAGE"
+                      value={val}
+                    />
+                  </div>
+                  <div className="app-form-group buttons">
+                    <button
+                      className="app-form-button"
+                      onClick={() => setVal(() => "")}
+                    >
+                      SEND
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        
-    )
+      </div>
+    </div>
+  );
 };
 
 export default ContactScreen;
