@@ -9,7 +9,7 @@
   
   .container, button, input {
     font-family: 'Montserrat', sans-serif;
-    flex: 0 1 700px;
+    flex: 0 1 55%;
     margin: auto;
     padding: 10px;
     border: none;
@@ -112,9 +112,17 @@
     height: 4px;
     background: #f4f4f4;
   }
-  
+  .app-location {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: #f4f4f4;
+    font-size: 26px;
+  }
+
   .app-contact {
     margin-top: auto;
+    display: block;
     font-size: 8px;
     color: #888;
   }
@@ -171,7 +179,7 @@
     }
   
     .screen-body-item.left {
-      margin-bottom: 30px;
+      margin-bottom: 10px;
     }
   
     .app-title {

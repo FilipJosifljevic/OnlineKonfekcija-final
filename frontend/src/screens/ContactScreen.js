@@ -1,6 +1,8 @@
 import "./ContactScreen.css";
 import { useState } from "react";
 
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+
 const ContactScreen = () => {
   const [val, setVal] = useState();
   return (
@@ -8,23 +10,20 @@ const ContactScreen = () => {
       <div className="background">
         <div className="container">
           <div className="screen">
-            <div className="screen-header">
-              <div className="screen-header-left">
-                <div className="screen-header-button close"></div>
-                <div className="screen-header-button maximize"></div>
-                <div className="screen-header-button minimize"></div>
-              </div>
-              <div className="screen-header-right">
-                <div className="screen-header-ellipsis"></div>
-                <div className="screen-header-ellipsis"></div>
-                <div className="screen-header-ellipsis"></div>
-              </div>
-            </div>
             <div className="screen-body">
               <div className="screen-body-item left">
                 <div className="app-title">
                   <span>CONTACT</span>
                   <span>US</span>
+                  <br />
+                  <span>OnlineKonfekcija</span>
+                </div>
+                <div className="app-location">
+                  <span>
+                    <br />
+                    <LocationOnIcon />
+                    123 Main Street
+                  </span>
                 </div>
                 <div className="app-contact">
                   CONTACT INFO : +391 123 456 789

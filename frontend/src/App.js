@@ -1,6 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState } from "react";
+import { useAuthContext } from "./context/useAuthContext";
 
 import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen";
@@ -15,6 +16,7 @@ import SideDrawer from "./components/SideDrawer";
 
 function App() {
   const [sideToggle, setSideToggle] = useState(false);
+  const { user } = useAuthContext();
   return (
     <Router>
       <Navbar click={() => setSideToggle(true)} />
@@ -24,7 +26,11 @@ function App() {
         <Routes>
           <Route exact path="/" element={<HomeScreen />} />
           <Route exact path="/product/:id" element={<ProductScreen />} />
-          <Route exact path="/cart" element={<CartScreen />} />
+          <Route
+            exact
+            path="/cart"
+            element={user ? <CartScreen /> : <LogInScreen />}
+          />
           <Route exact path="/contact" element={<ContactScreen />} />
           <Route exact path="/signup" element={<SignUpScreen />} />
           <Route exact path="/login" element={<LogInScreen />} />

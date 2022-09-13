@@ -1,16 +1,19 @@
 import "./SignUpScreen.css";
 import { useState } from "react";
 import { useLogIn } from "../hooks/useLogIn";
+import { useNavigate } from "react-router-dom";
 
 const LogInScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { logIn, error, isLoading } = useLogIn();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     await logIn(email, password);
+    navigate("/");
   };
   return (
     <form className="login" onSubmit={handleSubmit}>

@@ -1,16 +1,19 @@
 import "./SignUpScreen.css";
 import { useState } from "react";
 import { useSignUp } from "../hooks/useSignUp";
+import { useNavigate } from "react-router-dom";
 
 const SignUpScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { signUp, isLoading, error } = useSignUp();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     await signUp(email, password);
+    navigate("/login");
   };
 
   return (
